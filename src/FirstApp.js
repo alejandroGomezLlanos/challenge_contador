@@ -5,7 +5,6 @@ import { useState } from "react";
 const FirstApp = ({ value }) => {
   const [contador, setCounter] = useState(value);
 
-  console.log(data);
   const handleAdd = () => {
     //    console.log("llamada a handle");
     //    {

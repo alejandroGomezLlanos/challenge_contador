@@ -1,7 +1,5 @@
 import "./styles.css";
-import PropTypes from "prop-types";
 import { useState } from "react";
-import { useFetch } from "./customHooks/useFetch";
 //abilitando estado dinamico (Hooks)
 //useState nos permite crear estados
 
@@ -10,19 +8,11 @@ import { useFetch } from "./customHooks/useFetch";
 //creando arreglo para imprimirlo
 const categorias = ["primer categoria", "segunda categoria"];
 
-const arreglo = [];
-
 //variable, funcion que actualiza variable
 const FirstApp = ({ value }) => {
   const [contador, setCounter] = useState(value);
   const [category, setCategory] = useState(categorias);
 
-  //challenge
-  //el objeto DEBE tener el mismo nombre cuando lo desestructuramos
-  //por eso lo llamo data y no pepe
-  const { data } = useFetch("https://api.breakingbadquotes.xyz/v1/quotes/1");
-
-  console.log(data);
   const handleAdd = () => {
     //    console.log("llamada a handle");
     //    {
@@ -84,16 +74,6 @@ const FirstApp = ({ value }) => {
       <button onClick={(e) => myf2(e)}> algo</button>
     </>
   );
-};
-
-FirstApp.propTypes = {
-  value: PropTypes.number.isRequired
-};
-
-//valores por defecto
-//este es nuestro constructor por si no mandamos nada
-FirstApp.defaultProps = {
-  value: 0
 };
 
 export default FirstApp;

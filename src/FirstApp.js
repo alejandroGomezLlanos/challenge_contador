@@ -28,7 +28,6 @@ const FirstApp = ({ value }) => {
       <span> {contador} </span>
       <button onClick={() => handleAdd()}> +1 </button>
       <button onClick={() => handleRest()}> -1 </button>
-      <h1> Imprimiendo arreglos </h1>
     </>
   );
 };

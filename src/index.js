@@ -1,6 +1,5 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App";
 import FirstApp from "./FirstApp";
 
 //arriba imports
@@ -13,7 +12,6 @@ const root = createRoot(rootElement);
 
 root.render(
   <StrictMode>
-    <App titulo="cadena" />
     <FirstApp value={7} />
   </StrictMode>
 );
